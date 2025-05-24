@@ -99,6 +99,6 @@ const navTogglerBtn = document.querySelector(".nav-toggler"),
     return age;
 }
 
-// Your birthdate is 2003-10-04
+// My birthdate is 2003-10-04
 const userAge = calculateAge("2003-10-04");
 document.getElementById("user-age").textContent = userAge;
