@@ -790,12 +790,7 @@ h3.my-profession {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  .home .home-img {
-    /* display: none; */
-  }
   .home .home-img img {
-    /* border-radius: 5px;
-    height: 400px; */
     margin-top: 140px;
     margin-left: 60px;
   }
@@ -820,5 +815,17 @@ h3.my-profession {
   .about .about-content .personal-info {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  .home .home-img img {
+    margin-top: 115px;
+    margin-left: 30px;
+  }
+  .home-img::before {
+    left: 15px;
+    top: 85px;
+  }
+  .home-img::after {
+    right: -198px;
+    bottom: -23px;
   }
 }
