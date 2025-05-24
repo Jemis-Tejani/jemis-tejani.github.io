@@ -816,6 +816,9 @@ h3.my-profession {
     flex: 0 0 100%;
     max-width: 100%;
   }
+  .home .container {
+    margin-bottom: 50px;
+  }
   .home .home-img img {
     margin-top: 115px;
     margin-left: 30px;
