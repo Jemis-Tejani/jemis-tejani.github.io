@@ -3,8 +3,6 @@ var typed = new Typed(".typing", {
     "",
     "Web Developer",
     "Web Designer",
-    "Graphic Designer",
-    "YouTuber",
   ],
   typeSpeed: 100,
   backSpeed: 60,
