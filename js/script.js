@@ -1,8 +1,8 @@
 var typed = new Typed(".typing", {
   strings: [
     "",
-    "Web Designer",
     "Web Developer",
+    "Web Designer",
     "Graphic Designer",
     "YouTuber",
   ],
