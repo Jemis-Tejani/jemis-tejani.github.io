@@ -97,7 +97,7 @@
 
 1. **⌨️ Keyboard Shortcut – Press S**
 
-   You can press the S key on your keyboard at any time to open or close the Theme Color Switcher panel.
+   - You can press the S key on your keyboard at any time to open or close the Theme Color Switcher panel.
 
 2. **💾 Persistent Settings**
    - Your selected color theme and dark/light mode preference are automatically saved in your browser’s localStorage.
