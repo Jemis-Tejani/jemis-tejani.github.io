@@ -1,4 +1,4 @@
-// Typed.js Initialization
+// Initialize Typed.js for typing animation
 const typed = new Typed(".typing", {
   strings: ["Web Developer", "Web Designer"],
   typeSpeed: 100,
@@ -6,55 +6,64 @@ const typed = new Typed(".typing", {
   loop: true,
 });
 
-// Navigation Setup
+// Select navigation and all section elements
 const nav = document.querySelector(".nav");
 const navList = nav.querySelectorAll("li");
 const allSections = document.querySelectorAll(".section");
 
-// Navigation Link Click Event
-navList.forEach((navItem, index) => {
-  const link = navItem.querySelector("a");
-  link.addEventListener("click", function (e) {
+// Event delegation for navigation links
+nav.addEventListener("click", (e) => {
+  if (e.target.tagName === "A") {
     e.preventDefault();
+
     removeBackSection();
     addBackSection(getActiveNavIndex());
 
-    navList.forEach((item) => item.querySelector("a").classList.remove("active"));
-    this.classList.add("active");
+    // Remove active class from all links
+    navList.forEach((item) =>
+      item.querySelector("a").classList.remove("active")
+    );
 
-    showSection(this);
+    // Add active class to clicked link
+    e.target.classList.add("active");
 
+    // Show the corresponding section
+    showSection(e.target);
+
+    // Close aside on mobile view
     if (window.innerWidth < 1200) {
       toggleAsideSection();
     }
-  });
+  }
 });
 
-// Remove all back-section classes
+// Remove back-section class from all sections
 function removeBackSection() {
-  allSections.forEach(section => section.classList.remove("back-section"));
+  allSections.forEach((section) => section.classList.remove("back-section"));
 }
 
-// Add back-section to previous active section
+// Add back-section to the previously active section
 function addBackSection(index) {
   if (index !== -1) {
     allSections[index].classList.add("back-section");
   }
 }
 
-// Get current active nav index
+// Get the index of the currently active nav link
 function getActiveNavIndex() {
-  return [...navList].findIndex(item => item.querySelector("a").classList.contains("active"));
+  return [...navList].findIndex((item) =>
+    item.querySelector("a").classList.contains("active")
+  );
 }
 
-// Show corresponding section
+// Show section based on the clicked link
 function showSection(element) {
-  allSections.forEach(section => section.classList.remove("active"));
+  allSections.forEach((section) => section.classList.remove("active"));
   const targetId = element.getAttribute("href").split("#")[1];
   document.getElementById(targetId).classList.add("active");
 }
 
-// Update nav for hire-me click
+// Update active class in navigation manually (e.g. from "Hire Me" button)
 function updateNav(element) {
   navList.forEach((item) => {
     const link = item.querySelector("a");
@@ -65,7 +74,7 @@ function updateNav(element) {
   });
 }
 
-// Hire me button
+// "Hire Me" button click - go to specific section
 document.querySelector(".hire-me").addEventListener("click", function (e) {
   e.preventDefault();
   const sectionIndex = parseInt(this.getAttribute("data-section-index"), 10);
@@ -75,7 +84,7 @@ document.querySelector(".hire-me").addEventListener("click", function (e) {
   addBackSection(sectionIndex);
 });
 
-// Toggle aside menu
+// Toggle aside menu for smaller screen view
 const navTogglerBtn = document.querySelector(".nav-toggler");
 const aside = document.querySelector(".aside");
 
@@ -84,10 +93,10 @@ navTogglerBtn.addEventListener("click", toggleAsideSection);
 function toggleAsideSection() {
   aside.classList.toggle("open");
   navTogglerBtn.classList.toggle("open");
-  allSections.forEach(section => section.classList.toggle("open"));
+  allSections.forEach((section) => section.classList.toggle("open"));
 }
 
-// Age Calculator
+// Calculate user's age based on birth date
 function calculateAge(birthDateString) {
   const today = new Date();
   const birthDate = new Date(birthDateString);
@@ -99,5 +108,5 @@ function calculateAge(birthDateString) {
   return age;
 }
 
-// Display User Age
+// Display user age on page
 document.getElementById("user-age").textContent = calculateAge("2003-10-04");
