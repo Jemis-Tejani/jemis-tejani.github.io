@@ -11,6 +11,9 @@
 - ✅ **Fully Responsive Design** – Seamlessly adapts to desktop, tablet, and mobile screens.
 - 🎨 **Theme Color Switcher** – Includes 5 customizable color themes with a simple click.
 - 🌙 **Dark Mode Toggle** – Easily switch between light and dark mode for better user experience.
+- ⌨️ **Keyboard Shortcut ('S')** – Press the S key to quickly toggle the Theme Color Switcher.
+- 💾 **Persistent Theme Settings** – Dark/light mode and selected color theme are saved using localStorage
+  so they remain after refreshing or reopening the site.
 - 📄 **Download CV Option** – One-click download button to get my resume in PDF format.
 - ✨ **Typing Text Animation** – Smooth typing effect for dynamic introduction using `Typed.js`.
 - 🧭 **Smooth Navigation** – Sidebar-based navigation with active section highlight and transitions.
@@ -69,6 +72,7 @@
 - **JavaScript (Vanilla)** – Dynamic functionality and interactivity
 - **Typed.js** – Typing effect for header content
 - **Font Awesome** – Iconography
+- **LocalStorage API** – Saving theme preferences across sessions
 
 ---
 
@@ -89,10 +93,23 @@
 
 ---
 
+## ⚙️ New Functionality
+
+1. **⌨️ Keyboard Shortcut – Press S**
+
+   You can press the S key on your keyboard at any time to open or close the Theme Color Switcher panel.
+
+2. **💾 Persistent Settings**
+   - Your selected color theme and dark/light mode preference are automatically saved in your browser’s localStorage.
+   - When you reload or revisit the site, your preferred theme is applied automatically.
+
+---
+
 ## 🧠 What I Learned
 
 - Creating responsive layouts from scratch using Flexbox and media queries.
 - Managing and applying dynamic color themes and dark mode via JavaScript.
+- Enhancing user experience with keyboard shortcuts and persistent settings.
 - Structuring reusable and maintainable CSS with variables.
 - Handling DOM manipulation, class toggling, and event listeners.
 - Integrating third-party libraries (like Typed.js) for enhancing UI/UX.
